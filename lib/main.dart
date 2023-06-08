@@ -12,12 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'My Github Project',
-      theme: ThemeData(
-
-        primarySwatch: Colors.teal,
+      title: "My Github Project",
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: const Text("My All Github Project"),
+          centerTitle: true,
+        ),
       ),
-      home: const MyHomePage(title: 'My Github All Project'),
+
     );
   }
 }
