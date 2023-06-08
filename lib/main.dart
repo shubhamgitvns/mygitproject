@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
           shadowColor: Colors.lightBlueAccent,
           title: const Text("My All Github Project"),
           centerTitle: true,
-
         ),
+        body: MyHomePage(),
       ),
 
     );
@@ -28,37 +28,22 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-      appBar: AppBar(
-
-        title: Text(widget.title),
+    return Center(
+      child: Column(
+        children: <Widget>[
+          ElevatedButton(onPressed: (){},
+              child:const Text("click"))
+        ],
       ),
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-          ],
-        ),
-      ),
-
     );
   }
 }
