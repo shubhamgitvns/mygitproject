@@ -16,8 +16,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.teal,
+          shadowColor: Colors.lightBlueAccent,
           title: const Text("My All Github Project"),
           centerTitle: true,
+
         ),
       ),
 
