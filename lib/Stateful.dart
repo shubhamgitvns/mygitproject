@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Padding(
-                padding: EdgeInsets.all(0.0),
+                padding: EdgeInsets.all(20.0),
                 child: Text("My Profile Link"),
               ),
 
