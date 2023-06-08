@@ -38,16 +38,20 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               const Padding(
                 padding: EdgeInsets.all(20.0),
-                child: Text("My Profile Link"),
+                child: Text("My Profile Link",
+                  style: TextStyle(fontSize: 30,color: Colors.lime,),),
               ),
 
-              ElevatedButton(
-                // style: style,
-                onPressed: () => setState(() {
-                  _launched = _launchInBrowser(toLaunch);
-                }),
-                child: const SizedBox(child: Text(' in browser'),
-                  height: 20,),
+              SizedBox(
+               
+                height: 50,
+                child: ElevatedButton(
+                  // style: style,
+                  onPressed: () => setState(() {
+                    _launched = _launchInBrowser(toLaunch);
+                  }),
+                  child: const Text('Click in browser'),
+                ),
               ),
 
             ],
