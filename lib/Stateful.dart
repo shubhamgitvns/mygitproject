@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -26,21 +28,32 @@ class _MyHomePageState extends State<MyHomePage> {
         scheme: 'https',
         host: 'github.com',
         path: '/shubhamgitvns');
+
     return Center(
-      child: GridView.count(
-        crossAxisCount: 2,
-        children: <Widget>[
-          const Padding(
-            
-            padding: EdgeInsets.all(16.0),
-            child: Text("My Profile Link"),
-          ),
-          ElevatedButton(
-            onPressed: () => setState(() {
-              _launched = _launchInBrowser(toLaunch);
-            }),
-            child: const Text('Launch in browser'),
-          ),
+      child: Column(
+
+        children: [
+          Row(
+           mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(0.0),
+                child: Text("My Profile Link"),
+              ),
+
+              ElevatedButton(
+                // style: style,
+                onPressed: () => setState(() {
+                  _launched = _launchInBrowser(toLaunch);
+                }),
+                child: const SizedBox(child: Text(' in browser'),
+                  height: 20,),
+              ),
+
+            ],
+
+          )
+
         ],
       ),
     );
