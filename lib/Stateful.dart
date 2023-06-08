@@ -27,9 +27,11 @@ class _MyHomePageState extends State<MyHomePage> {
         host: 'github.com',
         path: '/shubhamgitvns');
     return Center(
-      child: Column(
+      child: GridView.count(
+        crossAxisCount: 2,
         children: <Widget>[
           const Padding(
+            
             padding: EdgeInsets.all(16.0),
             child: Text("My Profile Link"),
           ),
