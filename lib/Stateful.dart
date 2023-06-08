@@ -24,10 +24,16 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget build(BuildContext context) {
-    final Uri toLaunch = Uri(
+    final Uri toProfile = Uri(
         scheme: 'https',
         host: 'github.com',
         path: '/shubhamgitvns');
+
+    final Uri toLaunch = Uri(
+        scheme: 'https',
+        host: 'github.com',
+        path: '/shubhamgitvns/myapp');
+
 
     return Center(
       child: Column(
@@ -38,12 +44,43 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               const Padding(
                 padding: EdgeInsets.all(20.0),
-                child: Text("My Profile Link",
-                  style: TextStyle(fontSize: 30,color: Colors.lime,),),
+                child: SizedBox(
+                  width: 500,
+                  child: Text("My Git Profile Link",
+                    style: TextStyle(fontSize: 30,color: Colors.amber,),),
+                ),
               ),
 
               SizedBox(
-               
+
+                height: 50,
+                child: ElevatedButton(
+                  // style: style,
+                  onPressed: () => setState(() {
+                    _launched = _launchInBrowser(toProfile);
+                  }),
+                  child: const Text('Click in browser'),
+                ),
+              ),
+
+            ],
+
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(20.0),
+                child: SizedBox(
+                  width: 500,
+                  child: Text("My App Git File Link",
+                    style: TextStyle(fontSize: 30,color: Colors.amber),),
+                ),
+              ),
+
+              SizedBox(
+
                 height: 50,
                 child: ElevatedButton(
                   // style: style,
